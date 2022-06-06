@@ -16,3 +16,8 @@ cd to server aka "myapp" | run "nodemon app.js"
 cd to client aka "client" | run "npm start"
 
 you should see your rows listed
+
+////////
+if it didn't commit correctly, the original repo is here:
+https://github.com/niembro64/2022-06-05_express_sql_attempt
+
