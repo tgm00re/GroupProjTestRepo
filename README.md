@@ -15,4 +15,4 @@ pull down the git directory
 cd to server aka "myapp" | run "nodemon app.js"
 cd to client aka "client" | run "npm start"
 
-you should see yourr items listed
+you should see your rows listed
