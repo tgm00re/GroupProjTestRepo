@@ -3,7 +3,7 @@ const db = require("../database");
 
 
 
-module.exports.findFirstUser = (req, res) => {
+module.exports.findFirstUser = async (req, res) => {
     const results = await db.promise().query(`SELECT * FROM USERS`);
     // console.log(results);
     // console.log("-----------------------------")
@@ -13,7 +13,7 @@ module.exports.findFirstUser = (req, res) => {
 }
 
 
-module.exports.createUser = (req, res) => {
+module.exports.createUser = async (req, res) => {
     const { username, password, first_name, last_name } = req.body;
     const created_at = new Date().toISOString;
     if (username && password) {
