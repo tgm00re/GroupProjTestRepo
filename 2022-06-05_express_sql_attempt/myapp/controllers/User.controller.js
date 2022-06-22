@@ -3,7 +3,7 @@ const db = require("../database");
 
 
 
-module.exports.findFirstUser = (req, res) => {
+module.exports.findFirstUser = async (req, res) => {
     const results = await db.promise().query(`SELECT * FROM USERS`);
     // console.log(results);
     // console.log("-----------------------------")
