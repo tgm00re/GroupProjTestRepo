@@ -3,6 +3,8 @@ import React, { useEffect, useState, createElement } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { Switch, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 
 const Home = (props) => {
@@ -40,12 +42,18 @@ const Home = (props) => {
     }, []);
 
     return (
-        <>
-            <h1>TEST HOME</h1>
+        <div className="container">  
+            <div>
+                <h1>facebook</h1>
+                <h5>Connect with friends and the world around you on Facebook</h5>
+            </div>
+            <div>
+                <Login/>
+            </div>
             {fromDb.map((item, i) => {
                 return <p key={i}>{item.username} {item.password}</p>;
             })}
-        </>
+        </div>
     );
 };
 
