@@ -4,7 +4,11 @@ var router = express.Router();
 const UserController = require("../controllers/User.controller")
 
 
-router.get("/api/users/findFirstUser", UserController.findFirstUser);
+// router.get("/api/users/findFirstUser", UserController.findFirstUser);
+router.get("/api/users/findFirstUser", () => {
+    return "hello";
+});
+
 router.post("/api/users/create", UserController.findFirstUser);
 
 

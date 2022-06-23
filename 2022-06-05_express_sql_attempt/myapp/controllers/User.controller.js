@@ -10,10 +10,11 @@ module.exports.findFirstUser = async (req, res) => {
     // console.log(results[0][1].username);
     // res.send(200);
     res.status(200).send(results[0]);
-}
+} 
 
 
-module.exports.createUser = (req, res) => {
+
+module.exports.createUser = async (req, res) => {
     const { username, password, first_name, last_name } = req.body;
     const created_at = new Date().toISOString;
     if (username && password) {
